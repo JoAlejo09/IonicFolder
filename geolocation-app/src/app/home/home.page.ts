@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {Geolocation } from '../services/geolocation';
 
 @Component({
   selector: 'app-home',
@@ -9,5 +10,6 @@ import { Component } from '@angular/core';
 export class HomePage {
 
   constructor() {}
+  
 
 }
