@@ -1,0 +1,27 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Pokemon</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ion-spinner *ngIf="isloading"></ion-spinner>
+  <ion-grid *ngIf="!isloading">
+    <ion-row>
+      <ion-col size="6" *ngFor="let p of pokemons">
+        <ion-card>
+          <img [src]="p.sprites.front_default" alt="{{p.name}}">
+          <ion-card-header>
+            <ion-card-title>{{ p.name | titlecase }}</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            <p><strong>Altura:</strong> {{ p.height }}</p>
+            <p><strong>Peso:</strong> {{ p.weight }}</p>
+            <p><strong>Tipo:</strong> {{ p.types[0].type.name }}</p>
+            <p><strong>Rareza:</strong>{{p.held_items[0]?.version_details[0]?.rarity}}</p>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
