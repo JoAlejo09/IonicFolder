@@ -1,24 +1,62 @@
+<<<<<<< HEAD
 <ion-content class="ion-padding">
   <ion-spinner *ngIf="isloading"></ion-spinner>
 
+=======
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-button (click)="volver()">
+        <ion-icon slot="icon-only" name="arrow-back-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Pokédex</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <!-- Barra de búsqueda -->
+<ion-item>
+    <ion-input
+      placeholder="Buscar Pokémon por nombre"
+      [(ngModel)]="searchTerm"
+      type="text"
+      clear-input>
+    </ion-input>
+    <ion-button (click)="searchPokemon()" color="primary">
+      Buscar
+    </ion-button>
+  </ion-item>
+  <!-- Spinner de carga -->
+  <div class="ion-text-center" *ngIf="isloading">
+    <ion-spinner name="crescent" color="primary"></ion-spinner>
+    <p>Cargando Pokémon...</p>
+  </div>
+
+  <!-- Cuadrícula de Pokémon -->
+>>>>>>> 0351f4b02baaf9bb5b10bdf0d6ac032c6cf70098
   <ion-grid *ngIf="!isloading">
     <ion-row>
-      <ion-col size="6" *ngFor="let p of pokemons">
-        <ion-card>
-          <img [src]="p.sprites.front_default" alt="{{p.name}}">
+      <ion-col size="6" size-md="4" size-lg="3" *ngFor="let p of pokemons">
+        <ion-card (click)="abrirDetalles(p.name)" class="pokemon-card"  >
+          <img [src]="p.sprites.front_default" alt="{{p.name}}" />
           <ion-card-header>
             <ion-card-title>{{ p.name | titlecase }}</ion-card-title>
           </ion-card-header>
+<<<<<<< HEAD
           <ion-card-content>
             <p><strong>Altura:</strong> {{ p.height }}</p>
             <p><strong>Peso:</strong> {{ p.weight }}</p>
             <p><strong>Tipo:</strong> {{ p.types[0]?.type?.name }}</p>
           </ion-card-content>
+=======
+>>>>>>> 0351f4b02baaf9bb5b10bdf0d6ac032c6cf70098
         </ion-card>
       </ion-col>
     </ion-row>
   </ion-grid>
 
+<<<<<<< HEAD
   <ion-footer>
     <ion-toolbar>
       <ion-buttons slot="start">
@@ -29,4 +67,22 @@
       </ion-buttons>
     </ion-toolbar>
   </ion-footer>
+=======
+  <!-- Navegación entre páginas -->
+  <ion-footer class="ion-padding">
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-button (click)="anterior()" [disabled]="offset === 0">
+          ← Anterior
+        </ion-button>
+      </ion-buttons>
+      <ion-buttons slot="end">
+        <ion-button (click)="siguiente()">
+          Siguiente →
+        </ion-button>
+      </ion-buttons>
+    </ion-toolbar>
+  </ion-footer>
+
+>>>>>>> 0351f4b02baaf9bb5b10bdf0d6ac032c6cf70098
 </ion-content>
