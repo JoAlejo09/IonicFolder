@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-<ion-content class="ion-padding">
-  <ion-spinner *ngIf="isloading"></ion-spinner>
-
-=======
 <ion-header>
   <ion-toolbar color="primary">
     <ion-buttons slot="start">
@@ -34,7 +29,6 @@
   </div>
 
   <!-- Cuadrícula de Pokémon -->
->>>>>>> 0351f4b02baaf9bb5b10bdf0d6ac032c6cf70098
   <ion-grid *ngIf="!isloading">
     <ion-row>
       <ion-col size="6" size-md="4" size-lg="3" *ngFor="let p of pokemons">
@@ -43,31 +37,11 @@
           <ion-card-header>
             <ion-card-title>{{ p.name | titlecase }}</ion-card-title>
           </ion-card-header>
-<<<<<<< HEAD
-          <ion-card-content>
-            <p><strong>Altura:</strong> {{ p.height }}</p>
-            <p><strong>Peso:</strong> {{ p.weight }}</p>
-            <p><strong>Tipo:</strong> {{ p.types[0]?.type?.name }}</p>
-          </ion-card-content>
-=======
->>>>>>> 0351f4b02baaf9bb5b10bdf0d6ac032c6cf70098
         </ion-card>
       </ion-col>
     </ion-row>
   </ion-grid>
 
-<<<<<<< HEAD
-  <ion-footer>
-    <ion-toolbar>
-      <ion-buttons slot="start">
-        <ion-button (click)="anteriorPagina()" [disabled]="offset === 0">Anterior</ion-button>
-      </ion-buttons>
-      <ion-buttons slot="end">
-        <ion-button (click)="siguientePagina()">Siguiente</ion-button>
-      </ion-buttons>
-    </ion-toolbar>
-  </ion-footer>
-=======
   <!-- Navegación entre páginas -->
   <ion-footer class="ion-padding">
     <ion-toolbar>
@@ -84,5 +58,4 @@
     </ion-toolbar>
   </ion-footer>
 
->>>>>>> 0351f4b02baaf9bb5b10bdf0d6ac032c6cf70098
 </ion-content>
