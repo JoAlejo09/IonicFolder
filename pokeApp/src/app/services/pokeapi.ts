@@ -12,12 +12,18 @@ export class Pokeapi {
   constructor(private http:HttpClient){ }
 
   //Obtener la informacion de la API
-  getPokemonList(limit: number= 10): Observable<any>{
-    return this.http.get<any>(`${this.API_URL}pokemon?limit=${limit}`).pipe(
+  getPokemonList(limit: number= 10, offset:number=0): Observable<any>{
+    return this.http.get<any>(`${this.API_URL}pokemon?limit=${limit}&offset=${offset}`).pipe(
       switchMap(response=> {
         const pokemonDetails$= response.results.map((pokemon: any) => this.http.get(pokemon.url));
         return forkJoin(pokemonDetails$);
     })
     );
   } 
+  getPokemonbyName(name:string): Observable<any>{
+    return this.http.get<any>(`${this.API_URL}pokemon/${name}`);
+  }
+  getPokemonbyId(id:string): Observable<any>{
+    return this.http.get<any>(`${this.API_URL}pokemon/${id}`);
+  }
 }
