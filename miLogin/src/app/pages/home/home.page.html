@@ -1,10 +1,17 @@
 <ion-header>
-  <ion-toolbar>
+  <ion-toolbar color="primary">
     <ion-title>Inicio</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content class="ion-padding">
-  <h2>Bienvenido </h2>
-  <ion-button expand="block" (click)="logout()">Cerrar sesión</ion-button>
+  <h2>Bienvenido 👋</h2>
+
+  <ion-button expand="block" color="success" routerLink="/register">
+    Registrar nuevo usuario
+  </ion-button>
+
+  <ion-button expand="block" color="medium" (click)="logout()">
+    Cerrar sesión
+  </ion-button>
 </ion-content>
