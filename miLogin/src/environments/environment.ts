@@ -5,21 +5,21 @@
 export const environment = {
   production: false, 
   firebase:{
-/*    apiKey: "AIzaSyCVVot-se-tLf6bx7C1QRFmxe0zzBFC7fA",
+    apiKey: "AIzaSyCVVot-se-tLf6bx7C1QRFmxe0zzBFC7fA",
     authDomain: "appmovil-pokeapi.firebaseapp.com",
     projectId: "appmovil-pokeapi",
     storageBucket: "appmovil-pokeapi.firebasestorage.app",
     messagingSenderId: "1052790324903",
     appId: "1:1052790324903:web:4f61d05d04664d7c7ea582",
-    measurementId: "G-1R1JEKFDVW"*/
-    apiKey: "AIzaSyCEKPhpkPdWGtLFxJXiJx5WzNAc8u8qhVU",
+    measurementId: "G-1R1JEKFDVW"
+/*    apiKey: "AIzaSyCEKPhpkPdWGtLFxJXiJx5WzNAc8u8qhVU",
   authDomain: "bb-3abd4.firebaseapp.com",
   databaseURL: "https://bb-3abd4-default-rtdb.firebaseio.com",
   projectId: "bb-3abd4",
   storageBucket: "bb-3abd4.firebasestorage.app",
   messagingSenderId: "713537563741",
   appId: "1:713537563741:web:729d0c8aebe201e221b1b4",
-  measurementId: "G-GLN4KW5CJZ"
+  measurementId: "G-GLN4KW5CJZ"*/
   }
 };
 
