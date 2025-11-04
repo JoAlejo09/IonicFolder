@@ -15,6 +15,6 @@ export class HomePage {
 
   async logout() {
     await this.auth.logout();
-    this.router.navigate(['/login']);
+    this.router.navigate(['/tabs/tab1']);
   }
 }
