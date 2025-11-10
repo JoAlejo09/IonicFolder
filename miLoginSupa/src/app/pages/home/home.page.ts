@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms'; // ✅ <--- agrega esto
 import {
   IonContent, IonHeader, IonTitle, IonToolbar, IonButton,
-  IonText, IonList, IonItem, IonInput, IonFooter
+  IonText, IonList, IonItem, IonInput, IonFooter, IonLabel
 } from '@ionic/angular/standalone';
 import { SupabaseService } from 'src/app/services/supabase-service';
 
@@ -16,7 +16,7 @@ import { SupabaseService } from 'src/app/services/supabase-service';
     CommonModule,
     FormsModule, // ✅ <--- y aquí lo incluyes
     IonContent, IonHeader, IonTitle, IonToolbar,
-    IonButton, IonText, IonList, IonItem, IonInput, IonFooter
+    IonButton, IonText, IonList, IonItem, IonInput, IonFooter, IonLabel
   ]
 })
 export class HomePage implements OnInit, OnDestroy {

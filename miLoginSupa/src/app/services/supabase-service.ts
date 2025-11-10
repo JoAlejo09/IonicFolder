@@ -57,9 +57,11 @@ export class SupabaseService {
   return data;
   }
   async addMessage(content: string) {
+    const sesion = await this.getCurrentSession();
+    const email = sesion?.user.email;
     const { error } = await this.supabase
       .from('messages')
-      .insert({ content });
+      .insert({ content, autor:email });
     if (error) throw error;
   }
   listenToMessages(callback: (payload: any) => void) {
