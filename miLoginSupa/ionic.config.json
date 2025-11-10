@@ -1,0 +1,7 @@
+{
+  "name": "miLoginSupa",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}
