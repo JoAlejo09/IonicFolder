@@ -16,7 +16,7 @@ import { SupabaseService } from 'src/app/services/supabase-service';
     CommonModule,
     FormsModule, // ✅ <--- y aquí lo incluyes
     IonContent, IonHeader, IonTitle, IonToolbar,
-    IonButton, IonText, IonList, IonItem, IonInput, IonFooter, IonLabel
+    IonButton, IonText, IonList, IonItem, IonInput, IonFooter
   ]
 })
 export class HomePage implements OnInit, OnDestroy {
