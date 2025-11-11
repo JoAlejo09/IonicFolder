@@ -14,7 +14,7 @@ import { SupabaseService } from 'src/app/services/supabase-service';
   styleUrls: ['./home.page.scss'],
   imports: [
     CommonModule,
-    FormsModule, // ✅ <--- y aquí lo incluyes
+    FormsModule,
     IonContent, IonHeader, IonTitle, IonToolbar,
     IonButton, IonText, IonList, IonItem, IonInput, IonFooter
   ]
